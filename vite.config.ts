@@ -9,7 +9,7 @@ export default defineConfig({
         main: resolve("index.html"),
         page: resolve("postPage.html"),
         clientProfile: resolve("clientProfile.html"),
-        base: "Connected.io",
+        base: "/Connected.io/",
       },
     },
   },
