@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@layer components{
+  .main-container{
+       @apply max-w-full sm:w-[440px] md:w-[568px] lg:w-[724px] xl:w-[980px] 2xl:w-[1336px] mx-auto px-7 
+  }
+  .btn-style{
+    @apply py-2 px-4 text-[#0a192f] bg-[#64ffda] rounded-xl text-base font-semibold tracking-wide capitalize border-[#0a192f] border-2 hover:bg-[#64ffda]/70 transition-[background-color] duration-300 cursor-pointer;
+  }
+  .form-visibility{
+    visibility: visible !important;
+    opacity:100% !important;
+  }
+  .content-appearance{
+    @apply flex!;
+  }
+  .error-banner-appear{
+    @apply translate-y-0! ;
+  }
+  .error-banner-style{
+    @apply text-[#16A34A]! border-[#16A34A]! after:bg-[#16A34A]!;
+  }
+  .error-banner-style  #progressBar{
+    @apply bg-[#16A34A]!;
+  }
+  .add-new-post-appearance{
+    @apply flex!;
+  }
+  .porgressBarAnimate{
+     @apply  animate-[progressBarMove_2s_linear];
+  }
+  
+  body{
+    @apply bg-primary ;
+  }
+  body{
+    
+    
+  }
+}
+input[type="file"]::file-selector-button{
+  background-color: var(--color-mutedpar);
+  color:var(--color-paragraph);
+  font-weight:600;
+  height:100%;
+}
+@theme{
+  --color-primary:#1d2d50;
+  --color-secondary:#112240;
+  --color-btncolor:#64ffda;
+  --color-paragraph:#e1e7f0;
+  --color-mutedpar:#8892b0;
+  --color-card:#e1e7f0;
+}
+
+
+@keyframes progressBarMove{
+  to{
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "socialmediawebsite",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "axios": "^1.14.0",
+    "flowbite": "^4.0.1",
+    "tailwindcss": "^4.2.2"
+  }
+}

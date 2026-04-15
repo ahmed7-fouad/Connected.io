@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="./src/all.min.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+</head>
+<body>
+
+    <!-- Rounded Background Circles Effect -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden">
+      <section class="top-[-10%] right-[-5%] size-[35rem] rounded-full bg-[#64ffda] opacity-20 blur-[130px] "></section>
+      <section class="absolute bottom-[-10%] right-[-5%] w-[30rem] h-[30rem] rounded-full bg-[#00d2ff] opacity-15 blur-[120px]"></section>
+    </div>
+
+     <!-- Error Banner -->
+    <section id="errorBanner" class=" z-1000 w-md h-40 bg-btncolor fixed  top-5 right-5 -translate-y-1000 transition-transform duration-300 rounded-xl flex items-center justify-center border-2 text-red-500 border-red-500 after:content-[''] after:bg-red-500 after:rounded-full after:size-6 after:absolute  after:left-0 after:top-0 after:-translate-y-3 after:-translate-x-3 after:animate-pulse">
+      <h4 class="text-center font-bold capitalize text-md">Error</h4>
+      <section class="overflow-hidden  h-1 w-full absolute bottom-0 left-0 rounded-bl-xl rounded-br-xl">
+          <span id="progressBar" class="block h-full w-0 bg-red-500"></span>
+      </section>
+    </section>
+
+    <!-- RegisterForm -->
+     <section id="registerForm"class="w-screen h-screen bg-gray-900/50 fixed top-0
+      left-0 z-600 p-6 flex justify-center items-start invisible opacity-0 transition-[opacity] duration-300 ">
+        <form action="" class="bg-paragraph w-lg p-6 rounded-lg space-y-3" name="RegisterForm">
+          <h3 class="capitalize text-lg font-semibold tracking-wide">register</h3>
+          <hr class="border-mutedpar">
+          <p class="capitalize font-medium">profile image</p>
+            <section class="imageContainer rounded-lg overflow-hidden h-11 border-[0.5px] border-mutedpar">
+              <input class="bg-gray-100  w-full h-full border-0" type="file" title="profile_Image">
+            </section>
+            <section class="h-11 border-[0.5px] border-mutedpar">
+              <input class="w-full h-full rounded-lg border-0" type="text" placeholder="Enter Your Name">
+            </section>
+            <section class="h-11 flex rounded-lg overflow-hidden border-[0.5px] border-mutedpar">
+              <span class="bg-mutedpar  size-11 flex items-center justify-center text-paragraph font-semibold">@</span>
+              <input class="h-full flex-1 border-0" type="email" placeholder="Enter Your Email">
+            </section>
+            <section class="rounded-lg overflow-hidden h-11 border-[0.5px] border-mutedpar">
+              <input class="w-full h-full border-0" type="password" placeholder="Enter Your Password">
+            </section>
+            <hr class="mt-5 mb-9 border-mutedpar">
+            <section class="btns flex justify-end gap-2">
+              <button id="closeRegisterFormBtn" type="button" class="btn-style bg-gray-500 hover:bg-gray-600 text-white">close</button>
+              <button id="mainRegisterBtn" type="button" class="btn-style">register</button>
+            </section>
+        </form>
+     </section>
+    <!--// RegisterForm //-->
+
+    <!-- loginForm -->
+     <section id="loginForm"class="w-screen h-screen  bg-gray-900/50 fixed top-0
+      left-0 z-600 p-6 flex justify-center items-start  invisible opacity-0 transition-[opacity] duration-300 ">
+        <form action="" class="bg-paragraph w-lg p-6 rounded-lg space-y-3" name="LoginForm">
+          <h3 class="capitalize text-lg font-semibold tracking-wide">login</h3>
+          <hr class="border-mutedpar">
+            <section class="h-11 flex rounded-lg overflow-hidden border-[0.5px] border-mutedpar">
+              <input class="h-full flex-1 border-0" type="text" placeholder="Enter Your username">
+            </section>
+            <section class="rounded-lg overflow-hidden h-11 border-[0.5px] border-mutedpar">
+              <input class="w-full h-full border-0" type="password" placeholder="Enter Your Password">
+            </section>
+            <hr class="mt-5 mb-9 border-mutedpar">
+            <section class="btns flex justify-end gap-2">
+              <button id="closeLoginFormBtn" type="button" class="btn-style bg-gray-500 hover:bg-gray-600 text-white">close</button>
+              <button id="mainLoginBtn" type="button" class="btn-style">login</button>
+            </section>
+        </form>
+     </section>
+    <!--// loginForm //-->
+
+
+        <!-- header -->
+        <header class="">
+            <!-- nav -->
+            <nav class="sticky top-0 z-400">
+              <section class="main-container bg-card py-3 flex justify-between rounded-b-sm shadow-2xl flex-wrap">
+                <!-- Nav left side content -->
+                <section class="flex items-center gap-5">
+                    <section class="logo">
+                      <a href="index.html" class="capitalize text-primary font-bold text-2xl tracking-normal">connected.io</a>
+                    </section>
+                      <ul class="links flex items-center gap-3">
+                        <a href="index.html" class="capitalize font-medium text-base hover:text-primary transition-[color] duration-200"><li>home</li></a>
+                        <a href="profile.html" class="profileLink capitalize font-medium text-base hover:text-primary transition-[color] duration-200 hidden md:block"><li>profile</li></a>
+                      </ul>
+                </section>
+                  <!-- Nav Right Side Content -->
+                  <!-- Register And SignIn Buttons -->
+                   <section class="flex items-center">
+
+                    <!-- Valid Authentication Elements -->
+                    <section class="hidden cursor-pointer" id="AuthenticatedElements">
+                      <a href="profile.html"class="profileLink profileImageData flex items-center gap-2">
+                        <section class="profileImage size-9 bg-white rounded-full
+                        flex items-center justify-center overflow-hidden">
+                        <img class="w-100 h-100" src="" alt="">
+                      </section>
+                      <span class=""></span>
+                    </a>
+                    <button class="btn-style bg-red-500 text-white hover:bg-red-600 inline-block ml-2 p-2 md:px-4" id="logoutBtn">logout</button>
+                  </section> 
+                  <!--// Valid Authentication Elements //-->
+                  
+                    <!-- Non Valid Authentication Elements -->
+                    <section class="space-x-2 hidden content-appearance" id="unAuthenticatedElements">
+                      <button class="btn-style p-2 md:px-4" id="loginBtn">login</button>
+                      <button class="btn-style p-2 md:px-4" id="registerBtn">register</button>
+                    </section>
+                    <!--// Non Valid Authentication Elements //-->
+                   </section>
+
+              </section>
+            </nav>
+        
+    <section class="main-container my-11 bg-card">
+        <!-- User Data -->
+        <section id="userMainData"class="flex items-center gap-20 p-10 flex-wrap justify-center sm:justify-start">
+          <!-- Profile Self Information -->
+          <section class="info flex items-center gap-7">
+            <!-- Profile Image -->
+            <section class="rounded-full size-25 border-3 overflow-hidden">
+              <img class="w-full h-full" src="images/img2.jpg" alt="profileImage">
+            </section>
+            <!--// Profile Image //-->
+
+            <!-- Profile Info -->
+            <section class="space-y-2">
+              <p class="font-semibold text-lg">email</p>
+              <p class="font-semibold text-lg">username</p>
+              <p class="font-semibold text-lg">email</p>
+            </section>
+            <!--// Profile Info //-->
+          </section>
+          <!--// Profile Self Information //-->
+
+          <!-- user posts and comments -->
+          <section class="space-y-2">
+            <p class="capitalize font-medium text-5xl flex items-end">13 <span class="capitalize text-sm text-mutedpar h-fit">posts</span></p>
+            <p class="capitalize font-medium text-5xl flex items-end">30 <span class="capitalize text-sm text-mutedpar">comments</span></p>
+          </section>
+          <!--// user posts and comments //-->
+        </section>
+        <!--// User Data //-->
+    </section>
+    
+
+    <!-- Edit Post Form -->
+    <section id="editPostForm"class="w-screen h-screen bg-gray-900/50 fixed top-0
+      left-0 z-600 p-6 flex justify-center items-start invisible opacity-0   transition-[opacity] duration-300 ">
+        <form action="" class="bg-paragraph  w-lg p-6 rounded-lg space-y-3">
+          <h3 class="capitalize text-lg font-semibold tracking-wide">Edit Post</h3>
+          <hr class="border-mutedpar">
+          <p class="capitalize font-medium">post image</p>
+            <section class="imageContainer rounded-lg overflow-hidden h-11 border-[0.5px] border-mutedpar">
+              <input class="bg-gray-100  w-full h-full border-0" type="file" title="profile_Image">
+            </section>
+            <section class="rounded-lg overflow-hidden h-11 border-[0.5px] border-mutedpar">
+                <input type="text" class="w-full h-full border-0 resize-none text-mutedpar p-3" name="" id="" placeholder="Enter The Post Title">
+            </section>
+            <section class="rounded-lg overflow-hidden h-61 border-[0.5px] border-mutedpar">
+                <textarea id="body-text-area" class="w-full h-full border-0 resize-none text-mutedpar p-3" name="" id="" placeholder="Enter The Post Body"></textarea>
+            </section>
+            <hr class="mt-5 mb-9 border-mutedpar">
+            <section class="btns flex justify-end gap-2">
+              <button id="closeEditPostFormBtn" type="button" class="btn-style bg-gray-500 hover:bg-gray-600 text-white">close</button>
+              <button id="mainEditPostBtn" type="button" class="btn-style">edit</button>
+            </section>
+        </form>
+     </section>
+
+    <!-- Delete Post Form -->
+    <section id="deletePostForm"class="w-screen h-screen bg-gray-900/50 fixed top-0
+      left-0 z-600 p-6 flex text-center   justify-center items-center invisible opacity-0  transition-[opacity] duration-300 ">
+        <form action="" class="bg-paragraph  w-lg p-6 rounded-lg space-y-3">
+          <h3 class="capitalize text-lg font-semibold tracking-wide">are you sure you want to delete this post ?</h3>
+          <hr class="border-mutedpar">
+            <section class="btns flex justify-center gap-3">
+              <button id="deletePostFormBtn" type="button" class="btn-style py-3 px-7 bg-red-500 text-white hover:bg-red-600 ">yes</button>
+              <button id="closeDeletePostFormBtn" type="button" class="btn-style py-3 px-7  bg-gray-500 hover:bg-gray-600 text-white">no</button>
+            </section>
+        </form>
+     </section>
+
+
+    <!-- All User Cards -->
+    <section class="main-container">
+      <h1 id="mainUserName"class="text-3xl font-bold text-paragraph capitalize">userName</h1>
+      <section id="allCards" class="py-7 space-y-10">
+        <!-- ===== Card===== -->
+            <section class="card bg-paragraph p-4 rounded-sm shadow-[0_10px_35px_-12px_rgba(100,255,218,0.25)]">
+              <!-- Card Header -->
+              <header class="flex items-center gap-3 border-b-2 pb-3 border-black/20 mb-4">
+                <section class="w-full  flex justify-between items-center flex-wrap">
+                  <section class="flex items-center gap-3">
+                    <section class="userImage size-10 rounded-full overflow-hidden border-1 border-primary">
+                      <img class="widt-full h-full "src="images/img9.jpg" alt="">
+                    </section>
+                    <p class="userName font-semibold text-lg">userName</p>
+                  </section>
+                </section>
+              </header>
+              <!-- Card Image -->
+              <section class="overflow-hidden rounded-lg">
+                  <img src="images/img11.jpg" alt="card-img">
+              </section>
+              <!-- Releasing Time -->
+              <span class="relasing-time capitalize text-paragraph mt-2">2 min ago</span>
+              <!-- Card Content -->
+              <section class="space-y-2">
+                <h2 class="card-heading text-2xl capitalize font-semibold">special title treatment</h2>
+                <p class="card-paragraph font-light">with supporting text below as a natural lead in additional content</p>
+              </section>
+              <!-- Comment Part -->
+                <hr class="my-4 opacity-20">
+                <p class="capitalize cursor-pointer"><i class="fa-regular fa-comment"></i><span class="comments-number mx-1">(3)</span>comments</p>
+            </section>
+         <!--// ===== Card===== //-->
+      </section>
+
+
+    </section>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="./src/mainFunctions.js"></script>
+    <script src="./src/profile.js"></script>
+</body>
+</html>
