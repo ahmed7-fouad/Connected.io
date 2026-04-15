@@ -253,7 +253,7 @@ document.addEventListener("click",async (e)=>{
         Authorization: `Bearer ${token}`,
       };
       try{
-      let response = await axios.delete(`https://tarmeezacademy.com/api/v1/posts/${selectedPostId}`,{
+        await axios.delete(`https://tarmeezacademy.com/api/v1/posts/${selectedPostId}`,{
         headers:headersContent,
       });
       appearMsg("Post Has Been Deleted Successfully");
